@@ -34,6 +34,23 @@ TARGET_CPU_VARIANT := krait
 TARGET_KERNEL_TOOLCHAIN_VERSION := linaro-4.9
 TARGET_KERNEL_USE_AOSP_TOOLCHAIN := false
 
+# Compiler Optimization
+TARGET_GLOBAL_CFLAGS += -O3 -mfpu=neon-vfpv4 -mfloat-abi=softfp -mvectorize-with-neon-quad
+
+TARGET_GLOBAL_CPPFLAGS += -O3 -mfpu=neon-vfpv4 -mfloat-abi=softfp -mvectorize-with-neon-quad
+
+CLANG_TARGET_GLOBAL_CFLAGS += -Ofast -mfpu=neon-vfpv4 -mfloat-abi=softfp
+
+CLANG_TARGET_GLOBAL_CPPFLAGS += -Ofast -mfpu=neon-vfpv4 -mfloat-abi=softfp
+
+# Krait optimizations
+TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
+TARGET_USE_KRAIT_PLD_SET := true
+TARGET_KRAIT_BIONIC_PLDOFFS := 10
+TARGET_KRAIT_BIONIC_PLDTHRESH := 10
+TARGET_KRAIT_BIONIC_BBTHRESH := 64
+TARGET_KRAIT_BIONIC_PLDSIZE := 64
+
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Bootloader
