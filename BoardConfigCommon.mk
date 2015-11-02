@@ -155,7 +155,7 @@ BOARD_SEPOLICY_UNION += \
     sysinit.te \
     system_app.te \
     tee.te \
-    thermal-engine.te \
+    thermanager.te \
     vibe_data_file.te \
     ueventd.te \
     vold.te \
