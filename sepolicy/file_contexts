@@ -3,6 +3,8 @@
 
 /data/system/default_values         u:object_r:mpctl_data_file:s0
 
+/data/misc/location/gsiff(/.*)?     u:object_r:gsiffd_data_file:s0
+
 /dev/ttyHSL1                        u:object_r:cir_device:s0
 /dev/pn547                          u:object_r:nfc_device:s0
 /dev/rfkill                         u:object_r:rfkill_device:s0
@@ -19,5 +21,6 @@
 
 /sns(/.*)?                          u:object_r:sensors_persist_file:s0
 
+/system/bin/gsiff_daemon            u:object_r:gsiffd_exec:s0
 /system/bin/tune2fs                 u:object_r:tune2fs_exec:s0
 /system/bin/thermanager             u:object_r:thermanager_exec:s0
